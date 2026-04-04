@@ -11,37 +11,48 @@
 <body>
     <div><a href="produtos.php"><button>Voltar</button></a></div>
 
+    <h1>sobre nós</h1>
     <div class="membros">
+        <div class="bio">
+            <img src="fotos_membro/andreiperfil.jpeg" width="270px" height="270px" alt="perfildoandrei">
+            <h2>Andrei</h2>
+            <p>Desenvolvedor Back-end, responsável pela <br>inteligência e lógica do site.</p>
+        </div>
 
-        <img src="fotos_membros/andreiperfil.jpeg" width="250px" height="250px" alt="perfildoandrei">
+        <div class="bio">
+            <img src="fotos_membro/carlosperfil.jpeg" alt="perfildocarlos" width="270px" height="270px">
+            <h2>Carlos </h2>
+            <p>Desenvolvedor Front-end, focado na interface<br> e interação do usuário.</p>
+        </div>
 
-        <img src="fotos_membros/carlosperfil.jpeg" alt="perfildocarlos" width="250px" height="250px" >
+        <div class="bio">
+            <img src="fotos_membro/mariaperfil.jpeg" alt="perfildamaria" width="270px" height="270px">
+            <h2>Maria Lara</h2>
+            <p> Web Designer, cuidando da identidade visual <br>e do layout inicial.</p>
+        </div>
 
-        <img src="fotos_membros/mariaperfil.jpeg" alt="perfildamaria" width="250px" height="250px">
+        <div class="bio">
+            <img src="fotos_membro/sofiperfil.jpeg" alt="perfildasofia" width="270px" height="270px">
+            <h2>Sofia Hage</h2>
+            <p> Líder da equipe, responsável pela gestão<br> e organização do projeto.</p>
+        </div>
 
-        <img src="fotos_membros/sofiperfil.jpeg" alt="perfildasofia" width="250px" height="250px">
+        <div class="bio">
+            <img src="fotos_membro/larissaperfil.jpeg" alt="perfilarissa" width="270px" height="270px">
+            <h2>Larissa</h2>
+            <p>Quality Assurance (QA)<br> e Banco de Dados, responsável<br> pelos testes e pela segurança das
+                informações.</p>
+        </div>
 
-        <img src="fotos_membros/sofiaperfil.jpeg" alt="perfilarissa"
-        width="250px" height="250px">
 
     </div>
 
-    <div class="descricao">
-    <h2>Andrei - Backend</h2>
-    <p>O fodão de tudo</p>
-
-    <h2>Carlos - Frontend</h2>
-    <p>O fodão do visual</p>
-
-    <h2>Maria Lara - Designer</h2>
-    <p>A garota do design</p>
-
-    <h2>Sofia Hage - P.O</h2>
-    <p>A dona do bagulho</p>
-
-    <h2>Larissa - Banco de dados</h2>
-    <p>A filha do Arnóbio</p>
-
+    <div class="cabecalho">
+        <p>INSTITUTO FEDERAL DE EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DE RORAIMA
+            <br> Cbv
+            <br>Curso Técnico em Informática
+            <br> Série: 2º Ano
+        </p>
     </div>
 </body>
 
