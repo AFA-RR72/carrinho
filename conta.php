@@ -9,9 +9,9 @@
     <a href="../index.php"><button>Voltar</button></a>
     <?php session_start();
     if (!empty($_POST['nome']) && !empty($_POST['email']) && !empty($_POST['senha'])){
-    $_SESSION['nome'] = $_POST['nome'];
-    $_SESSION['email'] = $_POST['email'];
-    $_SESSION['senha'] = $_POST['senha'];
+    $_SESSION['nome'] = htmlspecialchars($_POST['nome']);
+    $_SESSION['email'] = htmlspecialchars($_POST['email']);
+    $_SESSION['senha'] = htmlspecialchars($_POST['senha']);
     header("Location: produtos.php");
     exit;
     }

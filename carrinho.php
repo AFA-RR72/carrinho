@@ -1,3 +1,4 @@
+<?php session_start()?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,40 +13,82 @@
     $carrinho = [];
     $total = 0;
     function formataRS($numero){
-        return "R$" . number_format($numero, 2, ".", ",");
+        return "R$" . number_format($numero, 2, ",", ".");
     }
-    if (!empty($_POST['cell'])){
-        $carrinho []= [
-            "nome" => "celular",
-            "valor" => 50
+    if (!empty($_POST['cell']) && !empty($_POST['quantidadecell'])){
+        $carrinho [] = [
+            "Nome" => "celular",
+            "Preço" => formataRS(50),
+            "Quantidade" => $_POST['quantidadecell'],
+            "Total" => 50*($_POST['quantidadecell'])
         ];
     }
-    if (!empty($_POST['fone'])){
-        $carrinho []= [
-            "nome" => "fone",
-            "valor" => 5
+    elseif (!empty($_POST['cell']) && empty($_POST['quantidadecell'])){
+        echo "Você precisa preencher a quantidade desejada. <br>";
+    }
+    if (!empty($_POST['fone']) && !empty($_POST['quantidadefone'])){
+        $carrinho [] = [
+            "Nome" => "fone",
+            "Preço" => formataRS(5),
+            "Quantidade" => $_POST['quantidadefone'],
+            "Total" => 5*($_POST['quantidadefone'])
         ];
     }
-    if (!empty($_POST['mouse'])){
-        $carrinho []= [
-            "nome" => "mouse",
-            "valor" => 7
+    elseif (!empty($_POST['fone']) && empty($_POST['quantidadefone'])){
+        echo "Você precisa preencher a quantidade desejada. <br>";
+    }
+    if (!empty($_POST['mouse']) && !empty($_POST['quantidademouse'])){
+        $carrinho [] = [
+            "Nome" => "mouse",
+            "Preço" => formataRS(7),
+            "Quantidade" => $_POST['quantidademouse'],
+            "Total" => 7*($_POST['quantidademouse'])
         ];
     }
-    if (!empty($_POST['notebook'])){
-        $carrinho []= [
-            "nome" => "notebook",
-            "valor" => 90
+    elseif (!empty($_POST['mouse']) && empty($_POST['quantidademouse'])){
+        echo "Você precisa preencher a quantidade desejada. <br>";
+    }
+    if (!empty($_POST['pc']) && !empty($_POST['quantidadepc'])){
+        $carrinho [] = [
+            "Nome" => "notebook",
+            "Preço" => formataRS(90),
+            "Quantidade" => $_POST['quantidadepc'],
+            "Total" => 90*($_POST['quantidadepc'])
         ];
     }
+    elseif (!empty($_POST['pc']) && empty($_POST['quantidadepc'])){
+        echo "Você precisa preencher a quantidade desejada. <br>";
+    }if (isset($_SESSION['produtos'])) {
+        foreach ($_SESSION['produtos'] as $index => $produto){
+            $check = $_POST["novo_$index"] ?? null;
+            $qtd = $_POST["quantidade_novo_$index"] ?? null;
+        if (!empty($check) && !empty($qtd)) {
+            $carrinho[] = [
+                "Nome" => $produto['Nome'],
+                "Valor" => formataRS($produto['Preço']),
+                "Quantidade" => $qtd,
+                "Total" => $produto['Preço'] * $qtd
+            ];
+        }
+        elseif (!empty($check) && empty($qtd)) {
+            echo "Você precisa preencher a quantidade de " . $produto['Nome'] . "<br>";
+        }
+        }
+    }
+
     foreach($carrinho as $index => $valor){
         echo "<hr>";
         $item = $index+1;
         echo "Item: $item <br>";
         foreach($valor as $key => $valor2){
-            echo $key . ": " . $valor2 . "<br>";
+            if($key == "Total"){
+                echo $key . ": " . formataRS($valor2) . "<br>";
+            }
+            else{
+                echo $key . ": " . $valor2 . "<br>";
+            }
         }
-        $total = $total + $valor["valor"];
+        $total = $total + $valor['Total'];
     }
     if ($total!=0){
         echo "<hr>O valor total da compra é: ". formataRS($total);
