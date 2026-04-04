@@ -24,8 +24,8 @@ if (isset($_POST['limpar'])){
 <body>
     <h1>Produtos</h1>
     <div>
-        <a href="sobre.php"><button>Sobre nós</button></a>
-        <a href="contav.php"><button>Ver sua conta</button></a>
+        <a href="sobre.php"><button>Sobre nós.</button></a>
+        <a href="contav.php"><button>Ver sua conta.</button></a>
     </div>
     <hr>
     <div>
