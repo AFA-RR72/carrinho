@@ -22,6 +22,7 @@ if (isset($_POST['limpar'])){
 </head>
 
 <body>
+        <!-- comentario ex -->
     <h1>Produtos</h1>
     <div>
         <a href="sobre.php"><button>Sobre nós</button></a>
