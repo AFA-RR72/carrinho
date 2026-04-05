@@ -7,14 +7,16 @@
     <link rel="stylesheet" href="view/index.css">
 </head>
 <body>
+    <h1>seja bem vindo!</h1>
+<h2>nós informe sobre você</h2>
     <form action="view/conta.php" method="post"> 
         <div class="container">
             <div class="card">
-        <label for="nome" class="input">Nome: <input type="text" name="nome" placeholder="Nome"></label>
+        <label for="nome" class="input2">Nome: </label><input type="text" name="nome" placeholder="Nome">
         <br>
-        <label for="email" class="input">E-mail: <input type="email" name="email" placeholder="exemplo@gmail.com"></label>
+        <label for="email" class="input2">E-mail: <input type="email" name="email" placeholder="exemplo@gmail.com"></label>
         <br>
-        <label for="senha" class="input">Senha:</label>
+        <label for="senha" class="input2">Senha:</label>
         <input type="password" placeholder="********" name="senha">
         <button type="submit">Enviar</button>
             </div>
