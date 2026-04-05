@@ -1,1 +1,1 @@
-# carrinho projeto escolar
+# Este é um projeto escolar de um site de produtos, dos quais você deve escolher os que quiser adicionar no seu carrinho, da quantidade desejada, que calculará o preço de cada um, o número de itens, o valor final e que dará um desconto se 10% caso o valor final seja acima de R$100,00. O site possui uma página de login, que guarda os dados que você preenche, possui uma página sobre nós, que explica a função de cada membro do grupo na produção do site, e possui as páginas previamente mencionadas.
