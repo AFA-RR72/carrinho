@@ -58,7 +58,8 @@
     }
     elseif (!empty($_POST['pc']) && empty($_POST['quantidadepc'])){
         echo "Você precisa preencher a quantidade desejada. <br>";
-    }if (isset($_SESSION['produtos'])) {
+    }
+    if (isset($_SESSION['produtos'])) {
         foreach ($_SESSION['produtos'] as $index => $produto){
             $check = $_POST["novo_$index"] ?? null;
             $qtd = $_POST["quantidade_novo_$index"] ?? null;
