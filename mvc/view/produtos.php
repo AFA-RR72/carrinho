@@ -45,7 +45,7 @@ if (isset($_POST['limpar'])){
             <?php
             if (!empty($_POST['nomenv']) && !empty($_POST['preconv'])) {
                 $_SESSION['produtos'][] = [
-                    "Nome" => $_POST['nomenv'],
+                    "Nome" => htmlspecialchars($_POST['nomenv']),
                     "Preço" => floatval(str_replace(",", ".", $_POST['preconv']))
                 ];
                 header("Location: produtos.php");
