@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>seja bem vindo!</h1>
-<h2>nós informe sobre você</h2>
+<h2>nos informe sobre você</h2>
     <form action="view/conta.php" method="post"> 
         <div class="container">
             <div class="card">
