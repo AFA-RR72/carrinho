@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sua conta</title>
+    <link rel="stylesheet" href="./contav.css">
 </head>
 <body>
     <h1>algumas informações de sua conta!</h1>

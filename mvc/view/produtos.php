@@ -18,7 +18,7 @@ if (isset($_POST['limpar'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="produtos.css">
 </head>
 
 <body>
@@ -30,7 +30,7 @@ if (isset($_POST['limpar'])){
     </div>
     <hr>
     <div class="produtos">
-        <h3>Escolha produtos:</h3>
+        <h2>Escolha produtos:</h2>
         <form method="post" action="carrinho.php">
             <label>Celular - R$50,00
                 <input type="checkbox" name="cell">
