@@ -19,7 +19,7 @@
     if (!empty($_POST['cell']) && !empty($_POST['quantidadecell'])){
         $carrinho [] = [
             "Nome" => "celular",
-            "Preço" => 50,
+            "Preço" => formataRS(50),
             "Quantidade" => $_POST['quantidadecell'],
             "Total" => 50*($_POST['quantidadecell'])
         ];
@@ -30,7 +30,7 @@
     if (!empty($_POST['fone']) && !empty($_POST['quantidadefone'])){
         $carrinho [] = [
             "Nome" => "fone",
-            "Preço" => 5,
+            "Preço" => formataRS(5),
             "Quantidade" => $_POST['quantidadefone'],
             "Total" => 5*($_POST['quantidadefone'])
         ];
@@ -41,7 +41,7 @@
     if (!empty($_POST['mouse']) && !empty($_POST['quantidademouse'])){
         $carrinho [] = [
             "Nome" => "mouse",
-            "Preço" => 7,
+            "Preço" => formataRS(7),
             "Quantidade" => $_POST['quantidademouse'],
             "Total" => 7*($_POST['quantidademouse'])
         ];
@@ -52,7 +52,7 @@
     if (!empty($_POST['pc']) && !empty($_POST['quantidadepc'])){
         $carrinho [] = [
             "Nome" => "notebook",
-            "Preço" => 90,
+            "Preço" => formataRS(90),
             "Quantidade" => $_POST['quantidadepc'],
             "Total" => 90*($_POST['quantidadepc'])
         ];
@@ -67,7 +67,7 @@
         if (!empty($check) && !empty($qtd)) {
             $carrinho[] = [
                 "Nome" => $produto['Nome'],
-                "Preço" => $produto['Preço'],
+                "Valor" => formataRS($produto['Preço']),
                 "Quantidade" => $qtd,
                 "Total" => $produto['Preço'] * $qtd
             ];
@@ -83,7 +83,7 @@
         $item = $index+1;
         echo "Item: $item <br>";
         foreach($valor as $key => $valor2){
-            if($key == "Total" || $key == "Preço"){
+            if($key == "Total"){
                 echo $key . ": " . formataRS($valor2) . "<br>";
             }
             else{

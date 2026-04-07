@@ -33,6 +33,10 @@ if (isset($_POST['limpar'])){
             <input type="submit" value="Enviar" class="enviar">
             <br>
             <button type="submit" name="limpar">Limpar produtos</button>
+            <br>
+
+           <a href="produtos.php"><button type="button">Voltar</button></a>
+        
             <?php
             if (!empty($_POST['nomenv']) && !empty($_POST['preconv'])) {
                 $_SESSION['produtos'][] = [
