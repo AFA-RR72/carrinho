@@ -1,4 +1,13 @@
-<?php session_start()?>
+<?php session_start();
+if (!isset($_SESSION['produtos'])) {
+    $_SESSION['produtos'] = [];
+}
+if (isset($_POST['limpar'])){
+    $_SESSION['produtos'] = [];
+    header("Location: produtos.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
