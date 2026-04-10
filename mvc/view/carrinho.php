@@ -25,7 +25,7 @@ if (isset($_POST['limpar'])){
     function formataRS($numero){
         return "R$" . number_format($numero, 2, ",", ".");
     }
-    if (!empty($_POST['cell']) && !empty($_POST['quantidadecell'])){
+    if (!empty($_POST['cell']) && !empty($_POST['quantidadecell'])){ // define o valor do celular
         $carrinho [] = [
             "Nome" => "celular",
             "Preço" => formataRS(50),
